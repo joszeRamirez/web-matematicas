@@ -2,24 +2,24 @@
 
 
 
-.menu1 {
+.menu3 {
     list-style-type: none; 
     width: 100%;
     background-color: #757575;
     text-align: center;
 }
 
-.menu1 li {
+.menu3 li {
     display: inline-flex; 
 }
 
-.menu1 li a {
+.menu3 li a {
     text-decoration: none; 
     color: white; 
     padding: 10px;
     width: 150px;
 }
 
-.menu1 li a:hover {
+.menu3 li a:hover {
     color: black; 
 }
