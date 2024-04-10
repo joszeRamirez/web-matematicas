@@ -1,5 +1,9 @@
 /* Estilos: Titulo de la WEB*/
 
+.titulo {
+    text-align: center;
+    font-size: x-large;
+}
 
 /* Estilos: Menu */
 
@@ -8,22 +12,93 @@
     width: 100%;
     background-color: #757575;
     text-align: center;
+    font-size: large;
 }
 
 .menuprincipal li {
     display: inline-block; 
-    margin-right: 30px; 
+    margin-right: 70px; 
 }
 
 .menuprincipal li a {
     text-decoration: none; 
     color: white; 
     padding: 10px;
-    width: 150px;
+    width: 250px;
     transition: background-color 0.3s, color 0.3s; 
 }
 
 .menuprincipal li a:hover {
     background-color: black; 
     color: white; 
+}
+
+
+
+
+/* Estilos: Pie de la Pagina/*/
+
+.piepagina{
+    width: 100%;
+    background-color: #757575; 
+}
+.piepagina .part1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.piepagina .part1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.piepagina .part1 .box figure img{
+    width: 250px;
+}
+.piepagina .part1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.piepagina .part1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.piepagina .part1 .redsocial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #454545;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.piepagina .part1 .redsocial a:hover{
+    color: black;
+}
+.piepagina .part2{
+    background-color: #454545;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.piepagina .part2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .piepagina .part1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
 }
