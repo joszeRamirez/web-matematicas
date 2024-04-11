@@ -1,138 +1,130 @@
-  t1 = "1"
-  t2 = '2'
-  t3 = '3'
-  t4 = '4'
-  t5 = '5'
-  t6 = '6'
-  t7 = '7'
-  t8 = '8'
-  t9 = '9'
-  t0 = '0'
-  toperador??= string
-  tcoma = '.'
-  tnega = '-'
-  pantalla: string = "";
-  almacenaje: number = 0;
-  operacion: number = 0;
 
-  limitar() {
+  var toperador ="";
+  const tcoma = '.';
+  const tnega = '-';
+  const pantalla = "";
+  var almacenaje = 0;
+  var operacion = 0;
+
+ function limitar() {
     let ver = false;
-    if (this.pantalla.length <= 9) {
+    if (document.getElementById("vistazo").value.length <= 9) {
       ver = true;
     }
     return ver;
   }
 
-  borra1() {
+  function borra1() {
     this.pantalla = this.pantalla.substring(0, this.pantalla.length - 1)
   }
 
-  borrabajo() {
+  function borrabajo() {
     this.pantalla = ""
   }
 
-  borratodo() {
+  function borratodo() {
     this.pantalla = ""
     this.almacenaje = 0
     this.toperador = ''
   }
 
-  teklar1() {
+  function teklar1() {
+    if (limitar()) {
+      document.getElementById('vistazo').value += document.getElementById("1").innerHTML;
+        // pantalla += t1;
+      
+      console.log("si vale")
+    } else {
+      alert("Excede el límite de números")
+    }
+  }
+  function teklar2() {
     if (this.limitar()) {
-      this.pantalla += this.t1;
+        document.getElementById('vistazo').value += document.getElementById("2").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar2() {
+  function teklar3() {
     if (this.limitar()) {
-      this.pantalla += this.t2;
+        document.getElementById('vistazo').value += document.getElementById("3").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar3() {
+  function teklar4() {
     if (this.limitar()) {
-      this.pantalla += this.t3;
+        document.getElementById('vistazo').value += document.getElementById("4").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar4() {
+  function teklar5() {
     if (this.limitar()) {
-      this.pantalla += this.t4;
+        document.getElementById('vistazo').value += document.getElementById("5").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar5() {
+  function teklar6() {
     if (this.limitar()) {
-      this.pantalla += this.t5;
+        document.getElementById('vistazo').value += document.getElementById("6").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar6() {
+  function teklar7() {
     if (this.limitar()) {
-      this.pantalla += this.t6;
+        document.getElementById('vistazo').value += document.getElementById("7").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar7() {
+  function teklar8() {
     if (this.limitar()) {
-      this.pantalla += this.t7;
+        document.getElementById('vistazo').value += document.getElementById("8").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar8() {
+  function teklar9() {
     if (this.limitar()) {
-      this.pantalla += this.t8;
+        document.getElementById('vistazo').value += document.getElementById("9").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
-  teklar9() {
+  function teklar0() {
     if (this.limitar()) {
-      this.pantalla += this.t9;
-      console.log(this.pantalla)
-    } else {
-      alert("Excede el límite de números")
-    }
-  }
-  teklar0() {
-    if (this.limitar()) {
-      this.pantalla += this.t0;
+        document.getElementById('vistazo').value += document.getElementById("0").innerHTML;
       console.log(this.pantalla)
     } else {
       alert("Excede el límite de números")
     }
   }
 
-  teklarComa() {
+  function teklarComa() {
     if (this.limitar()) {
       if (this.pantalla.includes('.')) {
         alert("Ya existe 1 decimal")
       } else {
-        this.pantalla += this.tcoma;
+        document.getElementById('vistazo').value += document.getElementById(",").innerHTML;
         console.log(this.pantalla)
       }
-      // document.getElementById('bcoma')
     } else {
       alert("Excede el límite de números")
     }
   }
 
-  teklarMenos() {
+  function teklarMenos() {
     if (this.limitar()) {
       let coma = this.pantalla.charAt(0);
       if (coma == '-') {
@@ -148,7 +140,7 @@
     }
   }
 
-  sumar() {
+  function sumar() {
     this.operacion = 1
     if (this.almacenaje != 0) {
       this.almacenaje = this.almacenaje + Number(this.pantalla)
@@ -161,7 +153,7 @@
     }
     this.toperador = "+"
   }
-  restar() {
+  function restar() {
     this.operacion = 2
     if (this.almacenaje != 0) {
       this.almacenaje = this.almacenaje - Number(this.pantalla)
@@ -174,7 +166,7 @@
     }
     this.toperador = "-"
   }
-  multiplicar() {
+  function multiplicar() {
     this.operacion = 3
     if (this.almacenaje != 0) {
       this.almacenaje = this.almacenaje * Number(this.pantalla)
@@ -187,7 +179,7 @@
     }
     this.toperador = "x"
   }
-  dividir() {
+  function dividir() {
     this.operacion = 4
     if (this.almacenaje != 0) {
       this.almacenaje = this.almacenaje / Number(this.pantalla)
@@ -200,7 +192,7 @@
     }
     this.toperador = "/"
   }
-  resultar() {
+  function resultar() {
     switch (this.operacion) {
       case 1:
         this.sumar()

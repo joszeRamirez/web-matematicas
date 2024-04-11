@@ -1,17 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css"> 
-    <script src="escripts.js"></script> 
+    <link rel="stylesheet" href="estilos.css">
+    <script src="escripts.js"></script>
     <title>Calculadora</title>
-    
+
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+
     <div class="titulo">
         <h1>Calculadora Dinámica</h1>
     </div>
@@ -24,7 +25,49 @@
             <li><a href="#">SOBRE NOSOTROS</a></li>
         </ul>
     </div>
-            <h1>Comenzar aqui...</h1>
+    <div id="calculadora" class="contecalcu">
+        <label id="almacenaje"></label><br>
+        <input class="mostrador" id="vistazo" oninput="limite(this); soloNumeros(this)" />
+        <br><br>
+        <button class="botnum" id="borra1" onclick="borra1()">k--</button>
+        <button class="botnum" id="borrabajo" onclick="borrabajo()" (keypress)="borrabajo()">CE</button>
+        <button class="botnum" id="borratodo" onclick="borratodo()">C</button>
+        <button class="botnum" id="divide" onclick="dividir()">/</button>
+        <br>
+        <button class="botnum" id="7" onclick="teklar7()">7</button>
+        <button class="botnum" id="8" onclick="teklar8()">8</button>
+        <button class="botnum" id="9" onclick="teklar9()">9</button>
+        <button class="botnum" id="multiplica" onclick="multiplicar()">x</button>
+        <br>
+        <button class="botnum" id="4" onclick="teklar4()">4</button>
+        <button class="botnum" id="5" onclick="teklar5()">5</button>
+        <button class="botnum" id="6" onclick="teklar6()">6</button>
+        <button class="botnum" id="resta" onclick="restar()">-</button>
+        <br>
+        <button class="botnum" id="1" onclick="teklar1()">1</button>
+        <button class="botnum" id="2" onclick="teklar2()">2</button>
+        <button class="botnum" id="3" onclick="teklar3()">3</button>
+        <button class="botnum" id="suma" onclick="sumar()">+</button>
+        <br>
+        <button class="botnum" id="nega" onclick="teklarMenos()">+/-</button>
+        <button class="botnum" id="0" onclick="teklar0()">0</button>
+        <button id="bcoma" class="botnum" onclick="teklarComa()">,</button>
+        <button class="botnum" id="resultado" onclick="resultar()">=</button>
+
+        <script>
+            function limite(input) {
+                if (input.value.length > 9) {
+                    input.value = input.value.slice(0, 9);
+                }
+            }
+            function soloNumeros(event) {
+                var charCode = event.keyCode;
+                if ((charCode > 64 && charCode < 91)) {
+                    console.log("si vale");
+                }
+            }
+        </script>
+    </div>
 
     <footer class="piepagina">
         <div class="part1">
@@ -37,7 +80,7 @@
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
-                <p>Somos un grupo de estudiantes aficionados a la programación pertenecientes 
+                <p>Somos un grupo de estudiantes aficionados a la programación pertenecientes
                     de la Universidad Politénica Salesiana.</p>
             </div>
             <div class="box">
@@ -55,4 +98,5 @@
         </div>
     </footer>
 </body>
+
 </html>

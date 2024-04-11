@@ -8,7 +8,7 @@
 /* Estilos: Menu */
 
 .menuprincipal {
-    list-style-type: none; 
+    list-style-type: none;
     width: 100%;
     background-color: #757575;
     text-align: center;
@@ -16,61 +16,98 @@
 }
 
 .menuprincipal li {
-    display: inline-block; 
-    margin-right: 70px; 
+    display: inline-block;
+    margin-right: 70px;
 }
 
 .menuprincipal li a {
-    text-decoration: none; 
-    color: white; 
+    text-decoration: none;
+    color: white;
     padding: 10px;
     width: 250px;
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .menuprincipal li a:hover {
-    background-color: black; 
-    color: white; 
+    background-color: black;
+    color: white;
 }
 
+/*Estilos calculadora*/
+.contecalcu {
+    /* display: grid; */
+    /* place-content: center; */
+    max-width: 215px;
+    margin: 5px auto;
+    padding: 1% 5% 2% 5%;
+    border: 1px solid #757575;
+    border-radius: 5px;
+    background-color: #757575;
+}
 
+.botnum {
+    padding: 10px 10px 10px 10px;
+    margin: 0%;
+    width: 50px;
+    font-size: medium;
+}
+
+.botnum:hover {
+    color:#fff;
+    background-color: black;
+}
+
+.mostrador {
+    width: 205px;
+    height: 50px;
+    text-align: right;
+    font-size: 16px;
+    display: grid;
+    place-content: center;
+}
 
 
 /* Estilos: Pie de la Pagina/*/
 
-.piepagina{
+.piepagina {
     width: 100%;
-    background-color: #757575; 
+    background-color: #757575;
 }
-.piepagina .part1{
+
+.piepagina .part1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
+    grid-gap: 50px;
     padding: 45px 0px;
 }
-.piepagina .part1 .box figure{
+
+.piepagina .part1 .box figure {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.piepagina .part1 .box figure img{
+
+.piepagina .part1 .box figure img {
     width: 250px;
 }
-.piepagina .part1 .box h2{
+
+.piepagina .part1 .box h2 {
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
-.piepagina .part1 .box p{
+
+.piepagina .part1 .box p {
     color: #efefef;
     margin-bottom: 10px;
 }
-.piepagina .part1 .redsocial a{
+
+.piepagina .part1 .redsocial a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -82,23 +119,27 @@
     text-align: center;
     transition: all 300ms ease;
 }
-.piepagina .part1 .redsocial a:hover{
+
+.piepagina .part1 .redsocial a:hover {
     color: black;
 }
-.piepagina .part2{
+
+.piepagina .part2 {
     background-color: #454545;
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
-.piepagina .part2 small{
+
+.piepagina .part2 small {
     font-size: 15px;
 }
-@media screen and (max-width:800px){
-    .piepagina .part1{
+
+@media screen and (max-width:800px) {
+    .piepagina .part1 {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
+        grid-gap: 30px;
         padding: 35px 0px;
     }
 }
