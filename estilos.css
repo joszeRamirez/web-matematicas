@@ -1,18 +1,37 @@
+body {
+    background-color: #83c7a5;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+}
+
 /* Estilos: Titulo de la WEB*/
 
-.titulo {
+.titulo h1 a{
+    display: block;
+    place-content: center;
     text-align: center;
-    font-size: x-large;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+.titulo h1 a:hover {
+    color: green;
 }
 
 /* Estilos: Menu */
 
 .menuprincipal {
     list-style-type: none;
-    width: 100%;
+    display: block;
+    place-content: center;
+    min-width: 98%;
     background-color: #757575;
     text-align: center;
     font-size: large;
+    padding: 10px 10px;
+    max-width: 1200px;
 }
 
 .menuprincipal li {
@@ -35,21 +54,32 @@
 
 /*Estilos calculadora*/
 .contecalcu {
-    /* display: grid; */
-    /* place-content: center; */
+    position: sticky;
     max-width: 215px;
-    margin: 5px auto;
+    height: 370px;
+    margin: auto;
     padding: 1% 5% 2% 5%;
     border: 1px solid #757575;
     border-radius: 5px;
     background-color: #757575;
 }
 
+.contemostra {
+    position: sticky;
+    width: 95%;
+    height: 200 px;
+    margin: 5% 1% 10% 1%;
+    padding: 1% 1% 1% 1%;
+    border: 1px solid #757575;
+    background-color: #9cd3ae;
+}
 .botnum {
     padding: 10px 10px 10px 10px;
     margin: 0%;
     width: 50px;
-    font-size: medium;
+    height: 50px;
+    font-size: 20px;
+    font-family: monospace;
 }
 
 .botnum:hover {
@@ -58,19 +88,32 @@
 }
 
 .mostrador {
-    width: 205px;
-    height: 50px;
+    width: 98%;
+    height: 30px;
+    margin: 0% 10% 0% 0%;
     text-align: right;
     font-size: 16px;
-    display: grid;
-    place-content: center;
+    border: 0px solid #9cd3ae;
+    background-color: #9cd3ae;
 }
 
+.reserva{
+    width: 98%;
+    height: 20px;
+    margin: 0% 10% 0% 0%;
+    text-align: left;
+    font-size: 10px;
+    border: 0px solid #9cd3ae;
+    background-color: #9cd3ae;
+}
 
 /* Estilos: Pie de la Pagina/*/
 
 .piepagina {
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    max-height: 40%;
     background-color: #757575;
 }
 
