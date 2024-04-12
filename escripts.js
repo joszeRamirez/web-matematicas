@@ -249,3 +249,15 @@ function mostrarCalcu() {
 
 }
 
+
+function mostrarEjemplos(id) {
+    var ejemplos = document.getElementById(id).getElementsByClassName("ejemplos")[0];
+    var boton = document.getElementById(id).getElementsByClassName("visualizar-ejemplos")[0];
+    if (ejemplos.style.display === "none") {
+        ejemplos.style.display = "block";
+        boton.textContent = "Ocultar Ejemplos";
+    } else {
+        ejemplos.style.display = "none";
+        boton.textContent = "Mostrar Ejemplos";
+    }
+}
