@@ -52,6 +52,78 @@ body {
     color: white;
 }
 
+
+
+/* Estilo: Summary  */
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    border: 1px solid #454545;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Estilo: botón del Summary */
+.visualizar-ejemplos {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+/* Estilos: Boton al pasar el mouse */
+.visualizar-ejemplos:hover {
+    background-color: black;
+}
+
+/* Estilo: Detalles del summary */
+details {
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.operacion > * {
+    margin-left: 20px;
+}
+
+.operacion p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+}
+
+.operacion .ejemplos p {
+    font-style: arial;
+}
+
+details[open] summary {
+    color: black;
+}
+
+
+/* Estilos: Ejemplos del Summary */
+
+.ejemplos {
+    display: none; 
+}
+
+.ejemplos.visible {
+    display: block; 
+}
+
+
 /*Estilos calculadora*/
 .contecalcu {
     position: sticky;

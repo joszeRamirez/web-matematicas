@@ -19,15 +19,66 @@
 
     <div>
         <ul class="menuprincipal">
-            <li><a href="#" onclick="mostrarOperaciones()">OPERACIONES BÁSICAS</a></li>
+            <li><a href="#Operaciones" onclick="mostrarOperaciones()">OPERACIONES BÁSICAS</a></li>
             <li><a href="#" onclick="mostrarCalcu()">CALCULADORA</a></li>
-            <li><a href="#">SOBRE NOSOTROS</a></li>
+            <li><a href="#Nosotros">SOBRE NOSOTROS</a></li>
         </ul>
     </div>
     <div>
         <div class="operaciones">
             <p> Suma resta Multiplicación y División</p>
         </div>
+
+
+
+        <h1 id="Operaciones">Operaciones Básicas</h1>
+
+        <details class="operacion" id="suma">
+            <summary>Suma</summary>
+            <p>Es una operación básica en matemáticas que consiste en combinar dos o más cantidades para obtener un total. Se representa con el símbolo "+".</p>
+            <div class="ejemplos">
+                <p>Ejemplo: 7 + 7 = 14</p>
+                <p>Ejemplo: 5 + 4 = 9</p>
+            </div>
+            <button class="visualizar-ejemplos">Mostrar Ejemplos</button>
+        </details>
+        
+        <details class="operacion" id="resta">
+            <summary>Resta</summary>
+            <p>Se utiliza para encontrar la diferencia entre dos cantidades. Se representa con el símbolo "-". </p>
+            <div class="ejemplos">
+                <p>Ejemplo: 10 - 3 = 7</p>
+                <p>Ejemplo: 8 - 7 = 1</p>
+            </div>
+            <button class="visualizar-ejemplos">Mostrar Ejemplos</button>
+        </details>
+
+
+        <details class="operacion" id="multiplicacion">
+            <summary>Multiplicación</summary>
+            <p> Es una operación matemática que consiste en repetir la suma de un número un determinado número de veces. Se representa con el símbolo "×" o "*".</p>
+            <div class="ejemplos">
+                <p>Ejemplo: 5 * 5 = 25</p>
+                <p>Ejemplo: 7 * 2 = 14</p>
+            </div>
+            <button class="visualizar-ejemplos">Mostrar Ejemplos</button>
+        </details>
+    
+
+        <details class="operacion" id="division">
+            <summary>División</summary>
+            <p>Es una operación matemáticas que se usa para divir una cantidad en partes iguales.
+                Se representa con el símbolo "÷" o "/".
+            </p>
+            <div class="ejemplos">
+                <p>Ejemplo: 4 / 2 = 2</p>
+                <p>Ejemplo: 10 / 5 = 2</p>
+            </div>
+            <button class="visualizar-ejemplos">Mostrar Ejemplos</button>
+        </details>
+
+
+
         <div hidden id="calculadora" class="contecalcu">
             <div class="contemostra">
                 <input type="number" class="reserva" id="almacenaje" disabled/><br>
@@ -75,6 +126,8 @@
         </div>
     </div>
 
+
+    
     <footer class="piepagina">
         <div class="part1">
             <div class="box">

@@ -248,3 +248,4 @@ function mostrarCalcu() {
     calcu.removeAttribute("hidden");
 
 }
+
