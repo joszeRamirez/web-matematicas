@@ -4,6 +4,7 @@ var operacion = 0;
 var toperador = "";
 const tnega = '-';
 
+// Limitador de dígitos en la calculadora(9)
 function limitar() {
     let ver = false;
     if (document.getElementById("vistazo").value.length <= 9) {
@@ -11,18 +12,18 @@ function limitar() {
     }
     return ver;
 }
-
+// Para borrar por unidades en la calculadora
 function borra1() {
     let pantalla = "";
     pantalla = document.getElementById('vistazo').value;
     pantalla = pantalla.substring(0, pantalla.length - 1);
     document.getElementById('vistazo').value = pantalla;
 }
-
+// Para borrar la sección base de la calculadora
 function borrabajo() {
     document.getElementById('vistazo').value = "";
 }
-
+// Para borrar todo el contenido de la calculadora
 function borratodo() {
     document.getElementById('vistazo').value = "";
     document.getElementById('almacenaje').value = "";
@@ -109,10 +110,11 @@ function teklar0() {
         alert("Excede el límite de números");
     }
 }
-
+// Para teclar el punto decimal en la calculadora
 function teklarComa() {
     if (this.limitar()) {
         let pantalla = document.getElementById('vistazo').value;
+        // Valida si ya existe el decimal en la pantalla
         if (pantalla.includes(',')) {
             alert("Ya existe 1 decimal");
         } else {
@@ -122,7 +124,7 @@ function teklarComa() {
         alert("Excede el límite de números")
     }
 }
-
+// Para convertir en negativo y viceversa el valor en la pantalla base de la calculadora
 function teklarMenos() {
     if (this.limitar()) {
         let pantalla = document.getElementById('vistazo').value;
@@ -230,25 +232,41 @@ function resultar() {
             break;
     }
     operacion = 0;
-    pantalla = this.almacenaje.toString();
+    pantalla = almacenaje.toString();
     toperador = '';
 }
 
+// Para mostrar la sección de operaciones y ocultar las demás
 function mostrarOperaciones() {
+    //  Constantes para guardar los divs de secciones
     const calcu = document.querySelector(".contecalcu");
     const opera = document.querySelector(".operaciones");
+    const sobre = document.querySelector(".aboutus");
     calcu.setAttribute("hidden", "true");
+    sobre.setAttribute("hidden", "true");
     opera.removeAttribute("hidden");
 }
-
+// Para mostrar la sección de calculadora y ocultar las demás
 function mostrarCalcu() {
+    //  Constantes para guardar los divs de secciones
     const calcu = document.querySelector(".contecalcu");
     const opera = document.querySelector(".operaciones");
+    const sobre = document.querySelector(".aboutus");
     opera.setAttribute("hidden", "true");
+    sobre.setAttribute("hidden", "true");
     calcu.removeAttribute("hidden");
 
 }
-
+// Para mostrar la sección de información y ocultar las demás
+function mostrarInfo() {
+    //  Constantes para guardar los divs de secciones
+    const calcu = document.querySelector(".contecalcu");
+    const opera = document.querySelector(".operaciones");
+    const sobre = document.querySelector(".aboutus");
+    calcu.setAttribute("hidden", "true");
+    opera.setAttribute("hidden", "true");
+    sobre.removeAttribute("hidden");
+}
 
 function mostrarEjemplos(id) {
     var ejemplos = document.getElementById(id).getElementsByClassName("ejemplos")[0];

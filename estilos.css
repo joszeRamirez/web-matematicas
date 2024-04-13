@@ -1,5 +1,10 @@
+/* Estilos del cuerpo de la página */
 body {
-    background-color: #83c7a5;
+    background-image: url("fondocalcu.png");
+    background-color: #34425e;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     position: relative;
     padding-bottom: 3em;
     min-height: 100vh;
@@ -7,15 +12,18 @@ body {
 
 /* Estilos: Titulo de la WEB*/
 
-.titulo h1 a{
+.titulo h1 a {
     display: block;
     place-content: center;
     text-align: center;
     font-size: 40px;
     text-decoration: none;
+    color: #ffffff;
     font-family: monospace;
     text-transform: uppercase;
+    background-color: #34425e;
 }
+
 .titulo h1 a:hover {
     color: green;
 }
@@ -52,7 +60,17 @@ body {
     color: white;
 }
 
-
+/* Estilo caja principal de contenido */
+.conteinerbase {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding: 1% 1% 1% 1%;
+    border: 1px solid #7c7979;
+    background-color: #cfd1d0;
+}
 
 /* Estilo: Summary  */
 
@@ -94,7 +112,7 @@ details {
     border-radius: 8px;
 }
 
-.operacion > * {
+.operacion>* {
     margin-left: 20px;
 }
 
@@ -116,11 +134,11 @@ details[open] summary {
 /* Estilos: Ejemplos del Summary */
 
 .ejemplos {
-    display: none; 
+    display: none;
 }
 
 .ejemplos.visible {
-    display: block; 
+    display: block;
 }
 
 /* Estilos: Titulo del ejemplo*/
@@ -128,7 +146,6 @@ details[open] summary {
 .operacion .ejemplos p strong {
     font-weight: bold;
 }
-
 
 /*Estilos calculadora*/
 .contecalcu {
@@ -142,15 +159,7 @@ details[open] summary {
     background-color: #757575;
 }
 
-.contemostra {
-    position: sticky;
-    width: 95%;
-    height: 200 px;
-    margin: 5% 1% 10% 1%;
-    padding: 1% 1% 1% 1%;
-    border: 1px solid #757575;
-    background-color: #9cd3ae;
-}
+/* Estilos botones de calculadora */
 .botnum {
     padding: 10px 10px 10px 10px;
     margin: 0%;
@@ -161,8 +170,19 @@ details[open] summary {
 }
 
 .botnum:hover {
-    color:#fff;
+    color: #fff;
     background-color: black;
+}
+
+/* Estilos pantallas de calculadora */
+.contemostra {
+    position: sticky;
+    width: 95%;
+    height: 200 px;
+    margin: 5% 1% 10% 1%;
+    padding: 1% 1% 1% 1%;
+    border: 1px solid #757575;
+    background-color: #9cd3ae;
 }
 
 .mostrador {
@@ -175,7 +195,7 @@ details[open] summary {
     background-color: #9cd3ae;
 }
 
-.reserva{
+.reserva {
     width: 98%;
     height: 20px;
     margin: 0% 10% 0% 0%;
@@ -190,12 +210,11 @@ details[open] summary {
 
 .piepagina {
     position: absolute;
-    /*bottom: 0;*/
     width: 100%;
-    max-height: 40%;
     background-color: #757575;
     clear: both;
     padding-top: 20px;
+    margin-top: 10%;
 }
 
 .piepagina .part1 {
@@ -203,7 +222,7 @@ details[open] summary {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
     padding: 45px 0px;
 }

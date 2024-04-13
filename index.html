@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="calculadora.png">
     <script src="escripts.js"></script>
     <title>Calculadora</title>
 
@@ -14,122 +15,129 @@
 <body>
 
     <div class="titulo">
-        <h1><a href="#">Calculadora Dinámica</a></h1>
+        <h1><a href="#">OPERACIONES MATEMÁTICAS</a></h1>
     </div>
 
     <div>
         <ul class="menuprincipal">
-            <li><a href="#Operaciones" onclick="mostrarOperaciones()">OPERACIONES BÁSICAS</a></li>
-            <li><a href="#" onclick="mostrarCalcu()">CALCULADORA</a></li>
-            <li><a href="#footer">SOBRE NOSOTROS</a></li>
+            <li><a href="#" onclick="mostrarOperaciones()">OPERACIONES BÁSICAS</a></li>
+            <li><a href="#" onclick="mostrarCalcu()">CALCULADORA DINÁMICA</a></li>
+            <li><a href="#" onclick="mostrarInfo()">SOBRE NOSOTROS</a></li>
         </ul>
     </div>
-    <div>
+    <div class="conteinerbase">
         <div class="operaciones">
-            <p> Suma resta Multiplicación y División</p>
+            <h1 id="Operaciones">Operaciones Básicas</h1>
+
+            <details class="operacion" id="suma">
+                <summary>Suma</summary>
+                <p>Es una operación básica en matemáticas que consiste en combinar dos o más cantidades para obtener un
+                    total. Se representa con el símbolo "+".</p>
+                <div class="ejemplos">
+                    <p><strong>Ejemplo Basico: </strong> 7 + 7 = 14</p>
+                    <p><strong>Ejemplo Intermedio: </strong> 40 + 70 = 110</p>
+                    <p><strong>Ejemplo Avanzado:</strong> 250 + 134 = 384</p>
+                </div>
+                <button class="visualizar-ejemplos" onclick="mostrarEjemplos('suma')">Mostrar Ejemplos</button>
+            </details>
+
+            <details class="operacion" id="resta">
+                <summary>Resta</summary>
+                <p>Se utiliza para encontrar la diferencia entre dos cantidades. Se representa con el símbolo "-". </p>
+                <div class="ejemplos">
+                    <p><strong>Ejemplo Basico: </strong> 10 - 5 = 5</p>
+                    <p><strong>Ejemplo Intermedio: </strong> 70 - 40 = 30</p>
+                    <p><strong>Ejemplo Avanzado:</strong> 250 - 134 = 116 </p>
+                </div>
+                <button class="visualizar-ejemplos" onclick="mostrarEjemplos('resta')">Mostrar Ejemplos</button>
+            </details>
+
+            <details class="operacion" id="multiplicacion">
+                <summary>Multiplicación</summary>
+                <p> Es una operación matemática que consiste en repetir la suma de un número un determinado número de
+                    veces. Se representa con el símbolo "×" o "*".</p>
+                <div class="ejemplos">
+                    <p><strong>Ejemplo Basico: </strong> 7 * 7 = 49</p>
+                    <p><strong>Ejemplo Intermedio: </strong> 12 * 8 = 96</p>
+                    <p><strong>Ejemplo Avanzado:</strong> 16 * 9 = 144</p>
+                </div>
+                <button class="visualizar-ejemplos" onclick="mostrarEjemplos('multiplicacion')">Mostrar
+                    Ejemplos</button>
+            </details>
+
+            <details class="operacion" id="division">
+                <summary>División</summary>
+                <p>Es una operación matemáticas que se usa para divir una cantidad en partes iguales.
+                    Se representa con el símbolo "÷" o "/".
+                </p>
+                <div class="ejemplos">
+                    <p><strong>Ejemplo Basico: </strong> 4 / 2 = 2</p>
+                    <p><strong>Ejemplo Intermedio: </strong> 30 / 6 = 5</p>
+                    <p><strong>Ejemplo Avanzado:</strong> 24 / 8 = 3</p>
+                </div>
+                <button class="visualizar-ejemplos" onclick="mostrarEjemplos('division')">Mostrar Ejemplos</button>
+            </details>
         </div>
-
-
-        <h1 id="Operaciones">Operaciones Básicas</h1>
-
-        <details class="operacion" id="suma">
-            <summary>Suma</summary>
-            <p>Es una operación básica en matemáticas que consiste en combinar dos o más cantidades para obtener un total. Se representa con el símbolo "+".</p>
-            <div class="ejemplos">
-                <p><strong>Ejemplo Basico: </strong> 7 + 7 = 14</p>
-                <p><strong>Ejemplo Intermedio: </strong> 40 + 70 = 110</p>
-                <p><strong>Ejemplo Avanzado:</strong> 250 + 134 = 384</p>
-            </div>
-            <button class="visualizar-ejemplos" onclick="mostrarEjemplos('suma')">Mostrar Ejemplos</button>
-        </details>
-        
-        <details class="operacion" id="resta">
-            <summary>Resta</summary>
-            <p>Se utiliza para encontrar la diferencia entre dos cantidades. Se representa con el símbolo "-". </p>
-            <div class="ejemplos">
-                <p><strong>Ejemplo Basico: </strong> 10 - 5 = 5</p>
-                <p><strong>Ejemplo Intermedio: </strong> 70 - 40 = 30</p>
-                <p><strong>Ejemplo Avanzado:</strong> 250 - 134 = 116 </p>
-            </div>
-            <button class="visualizar-ejemplos" onclick="mostrarEjemplos('resta')">Mostrar Ejemplos</button>
-        </details>
-        
-        <details class="operacion" id="multiplicacion">
-            <summary>Multiplicación</summary>
-            <p> Es una operación matemática que consiste en repetir la suma de un número un determinado número de veces. Se representa con el símbolo "×" o "*".</p>
-            <div class="ejemplos">
-                <p><strong>Ejemplo Basico: </strong> 7 * 7 = 49</p>
-                <p><strong>Ejemplo Intermedio: </strong>  12 * 8 = 96</p>
-                <p><strong>Ejemplo Avanzado:</strong>   16 * 9 = 144</p>
-            </div>
-            <button class="visualizar-ejemplos" onclick="mostrarEjemplos('multiplicacion')">Mostrar Ejemplos</button>
-        </details>
-        
-        <details class="operacion" id="division">
-            <summary>División</summary>
-            <p>Es una operación matemáticas que se usa para divir una cantidad en partes iguales.
-                Se representa con el símbolo "÷" o "/".
-            </p>
-            <div class="ejemplos">
-                <p><strong>Ejemplo Basico: </strong> 4 / 2 = 2</p>
-                <p><strong>Ejemplo Intermedio: </strong> 30 / 6 = 5</p>
-                <p><strong>Ejemplo Avanzado:</strong> 24 / 8 = 3</p>
-            </div>
-            <button class="visualizar-ejemplos" onclick="mostrarEjemplos('division')">Mostrar Ejemplos</button>
-        </details>
-
 
 
         <div hidden id="calculadora" class="contecalcu">
             <div class="contemostra">
-                <input type="number" class="reserva" id="almacenaje" disabled/><br>
+                <input type="number" class="reserva" id="almacenaje" disabled /><br>
                 <input class="mostrador" id="vistazo" oninput="limite(this)" disabled />
             </div>
-            
-            <button class="botnum" id="borra1" onclick="borra1()"><=</button>
-                    <button class="botnum" id="borrabajo" onclick="borrabajo()" (keypress)="borrabajo()">CE</button>
-                    <button class="botnum" id="borratodo" onclick="borratodo()">C</button>
-                    <button class="botnum" id="divide" onclick="dividir()">/</button>
-                    <br>
-                    <button class="botnum" id="7" onclick="teklar7()">7</button>
-                    <button class="botnum" id="8" onclick="teklar8()">8</button>
-                    <button class="botnum" id="9" onclick="teklar9()">9</button>
-                    <button class="botnum" id="multiplica" onclick="multiplicar()">x</button>
-                    <br>
-                    <button class="botnum" id="4" onclick="teklar4()">4</button>
-                    <button class="botnum" id="5" onclick="teklar5()">5</button>
-                    <button class="botnum" id="6" onclick="teklar6()">6</button>
-                    <button class="botnum" id="resta" onclick="restar()">-</button>
-                    <br>
-                    <button class="botnum" id="1" onclick="teklar1()">1</button>
-                    <button class="botnum" id="2" onclick="teklar2()">2</button>
-                    <button class="botnum" id="3" onclick="teklar3()">3</button>
-                    <button class="botnum" id="suma" onclick="sumar()">+</button>
-                    <br>
-                    <button class="botnum" id="nega" onclick="teklarMenos()">+/-</button>
-                    <button class="botnum" id="0" onclick="teklar0()">0</button>
-                    <button id="bcoma" class="botnum" onclick="teklarComa()">,</button>
-                    <button class="botnum" id="resultado" onclick="resultar()">=</button>
 
-                    <script>
-                        function limite(input) {
-                            if (input.value.length > 9) {
-                                input.value = input.value.slice(0, 9);
-                            }
-                        }
-                        function soloNumeros(event) {
-                            var charCode = event.keyCode;
-                            if ((charCode > 64 && charCode < 91)) {
-                                console.log("si vale");
-                            }
-                        }
-                    </script>
+            <button class="botnum" id="borra1" onclick="borra1()">K=</button>
+            <button class="botnum" id="borrabajo" onclick="borrabajo()" (keypress)="borrabajo()">CE</button>
+            <button class="botnum" id="borratodo" onclick="borratodo()">C</button>
+            <button class="botnum" id="divide" onclick="dividir()">/</button>
+            <br>
+            <button class="botnum" id="7" onclick="teklar7()">7</button>
+            <button class="botnum" id="8" onclick="teklar8()">8</button>
+            <button class="botnum" id="9" onclick="teklar9()">9</button>
+            <button class="botnum" id="multiplica" onclick="multiplicar()">x</button>
+            <br>
+            <button class="botnum" id="4" onclick="teklar4()">4</button>
+            <button class="botnum" id="5" onclick="teklar5()">5</button>
+            <button class="botnum" id="6" onclick="teklar6()">6</button>
+            <button class="botnum" id="resta" onclick="restar()">-</button>
+            <br>
+            <button class="botnum" id="1" onclick="teklar1()">1</button>
+            <button class="botnum" id="2" onclick="teklar2()">2</button>
+            <button class="botnum" id="3" onclick="teklar3()">3</button>
+            <button class="botnum" id="suma" onclick="sumar()">+</button>
+            <br>
+            <button class="botnum" id="nega" onclick="teklarMenos()">+/-</button>
+            <button class="botnum" id="0" onclick="teklar0()">0</button>
+            <button id="bcoma" class="botnum" onclick="teklarComa()">,</button>
+            <button class="botnum" id="resultado" onclick="resultar()">=</button>
+
+            <script>
+                function limite(input) {
+                    if (input.value.length > 9) {
+                        input.value = input.value.slice(0, 9);
+                    }
+                }
+                function soloNumeros(event) {
+                    var charCode = event.keyCode;
+                    if ((charCode > 64 && charCode < 91)) {
+                        console.log("si vale");
+                    }
+                }
+            </script>
         </div>
-    </div><br>
 
+        <div hidden class="aboutus">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Somos un grupo de estudiantes aficionados a la programación pertenecientes
+                de la Universidad Politénica Salesiana.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15939.024547484316!2d-78.9898791!3d-2.8865291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1826d90c7e47%3A0x8eb47b6b0138cb74!2sUniversidad%20Polit%C3%A9cnica%20Salesiana%20del%20Ecuador!5e0!3m2!1ses!2sec!4v1712984145834!5m2!1ses!2sec"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 
-    
-    <br><footer id="footer" class="piepagina">
+    <footer id="footer" class="piepagina">
         <div class="part1">
             <div class="box">
                 <figure>
@@ -137,11 +145,6 @@
                         <img src="logoups.png" alt="Logo UPS">
                     </a>
                 </figure>
-            </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Somos un grupo de estudiantes aficionados a la programación pertenecientes
-                    de la Universidad Politénica Salesiana.</p>
             </div>
             <div class="box">
                 <h2>NO OLVIDES SEGUIRNOS</h2>
@@ -154,7 +157,7 @@
             </div>
         </div>
         <div class="part2">
-            <small>&copy; 2024 <b>Bryan</b> - Todos los Derechos Reservados.</small>
+            <small>&copy; 2024 <b>BA && JR</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
 
