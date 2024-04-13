@@ -123,6 +123,12 @@ details[open] summary {
     display: block; 
 }
 
+/* Estilos: Titulo del ejemplo*/
+
+.operacion .ejemplos p strong {
+    font-weight: bold;
+}
+
 
 /*Estilos calculadora*/
 .contecalcu {
