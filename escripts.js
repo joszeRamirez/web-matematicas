@@ -464,13 +464,15 @@ function mostrarInfo() {
     // Quita el atributo de ocultar a la etiqueta
     sobre.removeAttribute("hidden");
 }
-
+// Para mostrar-ocultar los botones de los ejemplos 
 function mostrarEjemplos(id) {
     var ejemplos = document.getElementById(id).getElementsByClassName("ejemplos")[0];
     var boton = document.getElementById(id).getElementsByClassName("visualizar-ejemplos")[0];
+    // Comprueba si los ejemplos están ocultos o visibles.
     if (ejemplos.style.display === "none") {
         ejemplos.style.display = "block";
         boton.textContent = "Ocultar Ejemplos";
+        // Si están visibles, los oculta
     } else {
         ejemplos.style.display = "none";
         boton.textContent = "Mostrar Ejemplos";
