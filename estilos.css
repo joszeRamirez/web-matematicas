@@ -40,24 +40,37 @@ body {
     font-size: large;
     padding: 10px 10px;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .menuprincipal li {
     display: inline-block;
-    margin-right: 70px;
+    margin-right: 20px;
 }
 
 .menuprincipal li a {
     text-decoration: none;
     color: white;
-    padding: 10px;
-    width: 250px;
+    padding: 10px 20px;
+    display: block;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .menuprincipal li a:hover {
     background-color: black;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .menuprincipal {
+        padding: 10px 0; 
+    }
+
+    .menuprincipal li {
+        display: block; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
 }
 
 /* Estilo caja principal de contenido */
@@ -205,20 +218,64 @@ details[open] summary {
     background-color: #9cd3ae;
 }
 
-/* Estilos: Pie de la Pagina/*/
 
+/* Estilos: Sección "Sobre Nosotros" */
+
+.aboutus {
+    padding: 20px;
+    text-align: center; 
+}
+
+.aboutus h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.aboutus p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.aboutus iframe {
+    width: 100%; 
+    max-width: 100%;
+    height: 300px; 
+}
+
+
+@media screen and (max-width: 600px) {
+    .aboutus {
+        padding: 10px;
+    }
+
+    .aboutus h2 {
+        font-size: 20px;
+    }
+
+    .aboutus p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .aboutus iframe {
+        height: 200px; 
+    }
+}
+
+
+
+/* Estilos: Pie de la Página */
 
 .piepagina {
-    position: absolute;
     width: 100%;
     background-color: #757575;
-    clear: both;
     padding-top: 20px;
-    margin-top: 10%;
+    padding-bottom: 20px; 
 }
 
 .piepagina .part1 {
-    width: 100%;
+    width: 90%; 
     max-width: 1200px;
     margin: auto;
     display: grid;
@@ -227,16 +284,23 @@ details[open] summary {
     padding: 45px 0px;
 }
 
+.piepagina .part1 .box {
+    text-align: center; 
+}
+
 .piepagina .part1 .box figure {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: auto; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .piepagina .part1 .box figure img {
-    width: 250px;
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .piepagina .part1 .box h2 {
@@ -250,6 +314,10 @@ details[open] summary {
     margin-bottom: 10px;
 }
 
+.piepagina .part1 .redsocial {
+    text-align: center; 
+}
+
 .piepagina .part1 .redsocial a {
     display: inline-block;
     text-decoration: none;
@@ -258,6 +326,7 @@ details[open] summary {
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
+    margin-bottom: 10px; 
     background-color: #454545;
     text-align: center;
     transition: all 300ms ease;
@@ -280,9 +349,12 @@ details[open] summary {
 
 @media screen and (max-width:800px) {
     .piepagina .part1 {
-        width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 35px 0px;
+    }
+
+    .piepagina .part1 .box figure img {
+        max-width: 250px; 
     }
 }
