@@ -7,27 +7,30 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" type="image/x-icon" href="calculadora.png">
     <script src="escripts.js"></script>
-    <title>Calculadora</title>
+    <title>Operaciones Matemáticas</title>
 
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+    <!-- Título -->
     <div class="titulo">
-        <h1><a href="#">OPERACIONES MATEMÁTICAS</a></h1>
+        <h1><a href="#" onclick="mostrarOperaciones()">OPERACIONES MATEMÁTICAS</a></h1>
     </div>
-
+    <!-- Barra de navegación -->
     <div>
         <ul class="menuprincipal">
-            <li><a href="#" onclick="mostrarOperaciones()">OPERACIONES BÁSICAS</a></li>
-            <li><a href="#" onclick="mostrarCalcu()">CALCULADORA DINÁMICA</a></li>
-            <li><a href="#" onclick="mostrarInfo()">SOBRE NOSOTROS</a></li>
+            <li><a href="#Operaciones" onclick="mostrarOperaciones()">OPERACIONES BÁSICAS</a></li>
+            <li><a href="#calculadora" onclick="mostrarCalcu()">CALCULADORA DINÁMICA</a></li>
+            <li><a href="#sobre" onclick="mostrarInfo()">SOBRE NOSOTROS</a></li>
         </ul>
     </div>
-    <br><div class="conteinerbase">
+    <br>
+    <!-- Contenido -->
+    <div class="conteinerbase">
+        <!-- Sección "Operaciones básicas" -->
         <div class="operaciones">
-            <h1 id="Operaciones">Operaciones Básicas</h1>
+            <h2 id="Operaciones">Operaciones Básicas</h2>
 
             <details class="operacion" id="suma">
                 <summary>Suma</summary>
@@ -79,15 +82,16 @@
             </details>
         </div>
 
-
+        <!-- Sección "Calculadora Dinámica" -->
         <div hidden id="calculadora" class="contecalcu">
             <div class="contemostra">
-                <input type="number" class="reserva" id="almacenaje" disabled /><br>
+                <input type="number" class="reserva" id="almacenaje" disabled />
+                <input id="operador" class="signo" disabled />
                 <input class="mostrador" id="vistazo" oninput="limite(this)" disabled />
             </div>
 
             <button class="botnum" id="borra1" onclick="borra1()">K=</button>
-            <button class="botnum" id="borrabajo" onclick="borrabajo()" (keypress)="borrabajo()">CE</button>
+            <button class="botnum" id="borrabajo" onclick="borrabajo()">CE</button>
             <button class="botnum" id="borratodo" onclick="borratodo()">C</button>
             <button class="botnum" id="divide" onclick="dividir()">/</button>
             <br>
@@ -99,16 +103,16 @@
             <button class="botnum" id="4" onclick="teklar4()">4</button>
             <button class="botnum" id="5" onclick="teklar5()">5</button>
             <button class="botnum" id="6" onclick="teklar6()">6</button>
-            <button class="botnum" id="resta" onclick="restar()">-</button>
+            <button class="botnum" id="restar" onclick="restar()">-</button>
             <br>
             <button class="botnum" id="1" onclick="teklar1()">1</button>
             <button class="botnum" id="2" onclick="teklar2()">2</button>
             <button class="botnum" id="3" onclick="teklar3()">3</button>
-            <button class="botnum" id="suma" onclick="sumar()">+</button>
+            <button class="botnum" id="sumar" onclick="sumar()">+</button>
             <br>
             <button class="botnum" id="nega" onclick="teklarMenos()">+/-</button>
             <button class="botnum" id="0" onclick="teklar0()">0</button>
-            <button id="bcoma" class="botnum" onclick="teklarComa()">,</button>
+            <button id="bcoma" class="botnum" onclick="teklarComa()">.</button>
             <button class="botnum" id="resultado" onclick="resultar()">=</button>
 
             <script>
@@ -117,31 +121,40 @@
                         input.value = input.value.slice(0, 9);
                     }
                 }
-                function soloNumeros(event) {
-                    var charCode = event.keyCode;
-                    if ((charCode > 64 && charCode < 91)) {
-                        console.log("si vale");
-                    }
-                }
             </script>
         </div>
-
-        <div hidden class="aboutus">
+        <!-- Sección "Sobre Nosotros" -->
+        <div hidden id="sobre" class="aboutus">
             <h2>SOBRE NOSOTROS</h2>
-            <p>Con una pasión compartida por la programación Web, nosotros, somos un grupo de estudiantes de la Universidad Politécnica Salesiana, 
-                nos hemos unido para explorar y desarrollar nuestras habilidades en el mundo de la informática, saludos. </p>
+            <dl>
+                <dt>José A. Ramírez C.</dt>
+                <dd><strong>E-mail:</strong> <a href="https://www.ups.edu.ec/">jramirezc9@est.ups.edu.ec</a></dd>
+            </dl>
+            <dl>
+                <dt>Bryan I. Ávila G.</dt>
+                <dd><strong>E-mail:</strong> <a href="https://www.ups.edu.ec/">bavilag@est.ups.edu.ec</a></dd>
+            </dl>
+            <p>Con una pasión compartida por la programación Web, nosotros, somos un grupo de estudiantes de la
+                Universidad Politécnica Salesiana,
+                nos hemos unido para explorar y desarrollar nuestras habilidades en el mundo de la informática, saludos.
+            </p>
+            <p>
+                Estamos ubicados en:
+            </p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15939.024547484316!2d-78.9898791!3d-2.8865291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1826d90c7e47%3A0x8eb47b6b0138cb74!2sUniversidad%20Polit%C3%A9cnica%20Salesiana%20del%20Ecuador!5e0!3m2!1ses!2sec!4v1712984145834!5m2!1ses!2sec"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="fast"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
-    <br><footer id="footer" class="piepagina">
+    <br>
+    <!-- Pié de Página -->
+    <footer id="footer" class="piepagina">
         <div class="part1">
             <div class="box">
                 <figure>
-                    <a href="#">
+                    <a href="https://www.ups.edu.ec/">
                         <img src="logoups.png" alt="Logo UPS">
                     </a>
                 </figure>
@@ -149,7 +162,7 @@
             <div class="box">
                 <h2>NO OLVIDES SEGUIRNOS</h2>
                 <div class="redsocial">
-                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="https://www.facebook.com/sistemasupscuenca" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-youtube"></a>
